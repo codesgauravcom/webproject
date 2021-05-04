@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
 
 const contactSchema = new mongoose.Schema({
     name: String,
