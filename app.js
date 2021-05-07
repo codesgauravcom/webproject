@@ -14,7 +14,7 @@ const contactSchema = new mongoose.Schema({
     email: String,
     desc: String,
   });
-const Contact = mongoose.model('contact', contactSchema);  
+const Contact = mongoose.model('Contact', contactSchema);  
 
 
 // EXPRESS SPECIFIC STUFF
