@@ -19,7 +19,7 @@ const Contact = mongoose.model('contact', contactSchema);
 
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended: true}));
 
 // PUG SPECIFIC STUFF
 app.set('view engine', 'pug') // Set the template engine as pug
