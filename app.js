@@ -5,7 +5,12 @@ const port = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
 
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true,useUnifiedTopology: true});
+
+const MONGODB_URI = 'mongodb+srv://codesgaurav:20212021@cluster0.gnjtc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
+mongoose.connect( MONGODB_URI ||'mongodb://localhost:27017/test', {useNewUrlParser: true,useUnifiedTopology: true})
+.then(() => console.log('mongo db connected'))
+.catch(err => console.log(err));
 
 const contactSchema = new mongoose.Schema({
     name: String,
